@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nandi AR Experience</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.7/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Marker -->
+      <a-marker preset="hiro">
+        <!-- Image in AR -->
+        <a-image src="nandi.jpg" position="0 0.5 0" width="1.5" height="1.5"></a-image>
+
+        <!-- Background music -->
+        <a-sound 
+          src="music.mp3" 
+          autoplay="true" 
+          loop="true">
+        </a-sound>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
